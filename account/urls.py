@@ -1,13 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from ninja import NinjaAPI
 
-api = NinjaAPI()
-
-
-@api.get("/healthcheck/")
-def healthcheck(_):
-    return "healthy"
+from account.apis import api
 
 
 urlpatterns = [
