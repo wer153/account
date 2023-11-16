@@ -19,5 +19,5 @@ def healthcheck(_):
 
 
 @api.get("/users/", response=list[UserSchema])
-def get_users(request):
+def get_user_list(request):
     return list(User.objects.all())
